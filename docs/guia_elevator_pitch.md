@@ -31,7 +31,7 @@ todavía, se dice "pendiente", no se estima.
 - Guardar qué ventanas, qué catálogo y qué llegada P respaldan cada
   etiqueta, para poder responder "¿por qué esta ventana es sismo?".
 
-## Preguntas probables del profesor (y dónde está la respuesta)
+## Preguntas probables en la revisión (y dónde está la respuesta)
 
 - "¿Cómo clasificas ruido o sismo?" → `clasificacion_ruido_sismo.py`.
 - "¿Por qué esas 3 estaciones son las cercanas?" →

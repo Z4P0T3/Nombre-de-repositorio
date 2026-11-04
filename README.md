@@ -1,7 +1,7 @@
 Dataset de Ondas P — Red Sísmica Cubana (CW)
 Herramientas y scripts para la descarga, procesamiento y estructuración de registros de ondas P utilizando datos de estaciones sismológicas de la red cubana (CW) a través de FDSN y SeisBench.
 
-## Corrección 2026-11-03: lo que pidió revisar el profesor
+## Corrección 2026-11-03: verificación de estaciones y clasificación
 
 1. **¿Cómo se clasifica ruido o sismo?** El script de descarga NO
    clasifica. Extrae los 3 canales y guarda MiniSEED, nada más. La
