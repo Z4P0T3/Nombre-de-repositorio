@@ -31,8 +31,11 @@ Qué hay que entregar junto a cada etiqueta para que sea revisable:
   - inicio y fin de la ventana y estación/canal.
 
 Esta función es el contrato de etiquetado. El catálogo concreto
-(CENAIN / FDSN event service u otro) se pasa como lista de eventos;
-este archivo no inventa eventos para el 2023-10-15.
+es NEIC/USGS por FDSN (Client("USGS")), reemplazo oficial
+recomendado por EarthScope tras retirar su servicio de eventos
+el 1 de junio de 2026; las formas de onda siguen en EarthScope.
+El catálogo se pasa como lista de eventos; este archivo no
+inventa eventos para el 2023-10-15.
 """
 
 from dataclasses import dataclass

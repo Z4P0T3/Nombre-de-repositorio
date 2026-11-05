@@ -40,6 +40,14 @@ activas; en gris, otras estaciones HH de contexto.
 Coordenadas verificadas en el servicio FDSN de IRIS/EarthScope, red
 CW, para 2023-10-15. RCC: 19.995001, -75.696503.
 
+## Actualización 2026-11-05: catálogo NEIC/USGS
+
+- Las formas de onda y los metadatos de estaciones siguen en FDSN/EarthScope, red CW.
+- El catálogo de eventos ya no se pide a EarthScope: EarthScope retiró su servicio FDSN de eventos el 1 de junio de 2026 y recomienda ISC y NEIC como reemplazos.
+- El catálogo usado ahora es NEIC/USGS por FDSN (`Client("USGS")`, https://earthquake.usgs.gov/fdsnws/event/1/). En la misma búsqueda verificada (2020-2024, radio 3° alrededor de RCC) NEIC/USGS devuelve 122 eventos e ISC 107.
+- El cuaderno `dataset_eqt_colab.ipynb` (Drive/Colab, mismo enlace) ya usa ese catálogo; en periodos largos solo descarga segmentos de 7 minutos alrededor de cada evento, no años continuos.
+- Las estaciones y el mapa no cambian: RCC, MARV (22.0 km), CHIV (75.1 km), QMBU (95.1 km).
+
 ## Entrenamiento y evaluación (trabajo en paralelo, sin números inventados)
 
 La guía para el Elevator Pitch está en `docs/guia_elevator_pitch.md`.

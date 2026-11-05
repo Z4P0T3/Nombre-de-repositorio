@@ -14,6 +14,11 @@ IMPORTANTE - Qué hace y qué NO hace este script:
   catálogo = sismo; ventana sin evento cercano en el catálogo = ruido;
   sin evidencia de catálogo ni de llegada P = sin_etiqueta).
 
+Catálogo (actualización 2026-11-05): la etiqueta usa el catálogo
+NEIC/USGS por FDSN, no el servicio de eventos de EarthScope,
+retirado el 1 de junio de 2026. Las formas de onda de este
+script siguen descargándose de EarthScope, red CW.
+
 Estaciones cercanas - criterio verificado (no copiado sin revisar):
 Una estación cuenta como "cercana" solo si cumple TODAS estas
 condiciones para la ventana de trabajo (aquí, 2023-10-15):
