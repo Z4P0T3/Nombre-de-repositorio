@@ -1,7 +1,7 @@
 """
 Descarga y procesamiento para la red sísmica CW.
 
-Estación principal: RCC (Río Carpintero, Santiago de Cuba).
+Estación principal: MARV (Mar Verde, Santiago de Cuba).
 
 IMPORTANTE - Qué hace y qué NO hace este script:
 - SÍ descarga formas de onda de 3 componentes (HHZ, HHN, HHE) y las
@@ -25,19 +25,25 @@ condiciones para la ventana de trabajo (aquí, 2023-10-15):
   1. Pertenece a la red CW en el servicio FDSN de IRIS/EarthScope.
   2. Tiene los 3 canales de banda ancha HHZ, HHN y HHE activos.
   3. Se ordena por distancia haversine (gran círculo, R = 6371 km)
-     desde RCC y se toman las 3 primeras.
+     desde MARV y se toman las 3 primeras.
+  4. La estación debe entregar ondas reales en EarthScope
+     (dataselect). Sin datos, no entra, aunque esté cerca.
 
-Resultado verificado para 2023-10-15:
-  MARV  22.0 km - Mar Verde, Santiago de Cuba
-  CHIV  75.1 km - Chivirico, Guamá, Santiago de Cuba
-  QMBU  95.1 km - Quimbuelo, San Antonio del Sur, Guantánamo
+Resultado verificado (2026-11-05):
+  CHIV  53.2 km - Chivirico, Guamá, Santiago de Cuba
+  NMDO  114.4 km - Presa Nuevo Mundo, Moa, Holguín
+  QMBU  116.3 km - Quimbuelo, San Antonio del Sur, Guantánamo
+
+Excluidas por falta de datos en EarthScope, aunque tengan HH:
+RCC (22.0 km desde MARV, sin datos en 2016-2025), HLG
+(107.4 km) y LMGC (114.9 km).
 
 Corrección respecto a la versión anterior: la lista anterior
 (MOAC, TGU, CEN) no cumple ese criterio en FDSN/CW para esa fecha.
 MOAC está a 107.4 km de RCC y en esa ventana solo ofrece canales EH
 (corto periodo) y HN, no HH; TGU y CEN no aparecen como códigos de
 estación CW en la consulta FDSN para esa fecha. Por eso se sustituyen
-por MARV, CHIV y QMBU. El cálculo reproducible está en
+por CHIV, NMDO y QMBU. El cálculo reproducible está en
 estaciones_cercanas.py y el mapa en docs/mapa_estaciones_cercanas.svg.
 """
 
@@ -48,8 +54,8 @@ import pandas as pd
 
 
 # Coordenadas verificadas en IRIS FDSN (red CW, 2023-10-15).
-ESTACION_PRINCIPAL = "RCC"
-ESTACIONES_CERCANAS = ["MARV", "CHIV", "QMBU"]  # Ver criterio arriba.
+ESTACION_PRINCIPAL = "MARV"
+ESTACIONES_CERCANAS = ["CHIV", "NMDO", "QMBU"]  # Ver criterio arriba.
 
 
 def ejecutar_pipeline_sismologia():

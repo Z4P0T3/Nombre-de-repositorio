@@ -9,8 +9,8 @@ todavía, se dice "pendiente", no se estima.
 
 1. **Problema (15 s):** distinguir, en registros de la red cubana,
    una ventana con onda P de un sismo de una ventana de ruido.
-2. **Datos (20 s):** red CW, estación principal RCC y las 3 cercanas
-   verificadas (MARV 22.0 km, CHIV 75.1 km, QMBU 95.1 km), 3 canales
+2. **Datos (20 s):** red CW, estación principal MARV y las 3 cercanas
+   verificadas con datos (CHIV 53.2 km, NMDO 114.4 km, QMBU 116.3 km), 3 canales
    HHZ/HHN/HHE a 100 Hz. La etiqueta no sale de la descarga: viene
    del catálogo y de la llegada P (ver `clasificacion_ruido_sismo.py`).
 3. **Método (20 s):** descarga FDSN, ventanas etiquetadas, división
