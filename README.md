@@ -46,6 +46,7 @@ CW, para 2023-10-15. RCC: 19.995001, -75.696503.
 - El catálogo de eventos ya no se pide a EarthScope: EarthScope retiró su servicio FDSN de eventos el 1 de junio de 2026 y recomienda ISC y NEIC como reemplazos.
 - El catálogo usado ahora es NEIC/USGS por FDSN (`Client("USGS")`, https://earthquake.usgs.gov/fdsnws/event/1/). En la misma búsqueda verificada (2020-2024, radio 3° alrededor de RCC) NEIC/USGS devuelve 122 eventos e ISC 107.
 - El cuaderno `dataset_eqt_colab.ipynb` (Drive/Colab, mismo enlace) ya usa ese catálogo; en periodos largos solo descarga segmentos de 7 minutos alrededor de cada evento, no años continuos.
+- Prueba visual: el cuaderno incluye una sección 13 sin widgets que grafica una ventana de sismo (con llegada P marcada), una de ruido y los conteos por etiqueta.
 - Las estaciones y el mapa no cambian: RCC, MARV (22.0 km), CHIV (75.1 km), QMBU (95.1 km).
 
 ## Entrenamiento y evaluación (trabajo en paralelo, sin números inventados)
